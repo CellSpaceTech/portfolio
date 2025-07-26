@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio & Project Showcase - CellSpace Tech</title>
+    <meta name="description" content="Explore CellSpace Tech's curated portfolio showcasing 5+ years of development excellence across web applications, mobile apps, API integrations, and database solutions." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fcellspace9739back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary overflow-x-hidden">
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+        <div class="container-max px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-accent to-success rounded-lg flex items-center justify-center">
+                        <span class="text-primary font-bold text-sm">CS</span>
+                    </div>
+                    <span class="text-xl font-semibold text-text-primary">CellSpace Tech</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage_developer_portfolio.html" class="text-text-secondary hover:text-accent animation-micro">Home</a>
+                    <a href="about_professional_background.html" class="text-text-secondary hover:text-accent animation-micro">About</a>
+                    <a href="services_technology_stack.html" class="text-text-secondary hover:text-accent animation-micro">Services</a>
+                    <a href="portfolio_project_showcase.html" class="text-text-primary hover:text-accent animation-micro">Portfolio</a>
+                    <a href="contact_consultation.html" class="text-text-secondary hover:text-accent animation-micro">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-hover animation-micro">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-border">
+            <div class="px-4 py-2 space-y-1">
+                <a href="homepage_developer_portfolio.html" class="block px-3 py-2 text-text-secondary hover:text-accent animation-micro">Home</a>
+                <a href="about_professional_background.html" class="block px-3 py-2 text-text-secondary hover:text-accent animation-micro">About</a>
+                <a href="services_technology_stack.html" class="block px-3 py-2 text-text-secondary hover:text-accent animation-micro">Services</a>
+                <a href="portfolio_project_showcase.html" class="block px-3 py-2 text-text-primary hover:text-accent animation-micro">Portfolio</a>
+                <a href="contact_consultation.html" class="block px-3 py-2 text-text-secondary hover:text-accent animation-micro">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-background via-surface/20 to-background">
+        <div class="container-max px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="mb-6">
+                    <span class="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium mb-4">
+                        50+ Projects Delivered
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                        <span class="block">Portfolio &</span>
+                        <span class="text-gradient">Project Showcase</span>
+                    </h1>
+                    <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                        Curated collection of real-world solutions that demonstrate technical expertise and business impact across diverse industries and technologies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="pb-8">
+        <div class="container-max px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button onclick="filterProjects('all')" class="filter-btn active px-6 py-3 rounded-lg font-medium animation-micro" data-filter="all">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0l-4-4m4 4l-4 4"/>
+                    </svg>
+                    All Projects
+                </button>
+                <button onclick="filterProjects('web')" class="filter-btn px-6 py-3 rounded-lg font-medium animation-micro" data-filter="web">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"/>
+                    </svg>
+                    Web Applications
+                </button>
+                <button onclick="filterProjects('mobile')" class="filter-btn px-6 py-3 rounded-lg font-medium animation-micro" data-filter="mobile">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z"/>
+                    </svg>
+                    Mobile Apps
+                </button>
+                <button onclick="filterProjects('api')" class="filter-btn px-6 py-3 rounded-lg font-medium animation-micro" data-filter="api">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                    </svg>
+                    API Integrations
+                </button>
+                <button onclick="filterProjects('database')" class="filter-btn px-6 py-3 rounded-lg font-medium animation-micro" data-filter="database">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+                    </svg>
+                    Database Solutions
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="section-padding">
+        <div class="container-max px-4 sm:px-6 lg:px-8">
+            <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1: E-commerce Platform -->
+                <div class="project-card card group hover:border-accent/50 border border-transparent animation-smooth" data-category="web">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="E-commerce Platform Dashboard" class="w-full h-48 object-cover group-hover:scale-105 animation-smooth" onerror="this.src='https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 animation-smooth"></div>
+                        <div class="absolute top-4 right-4">
+                            <span class="px-2 py-1 bg-accent/20 text-accent rounded text-xs font-medium">Featured</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">ShopFlow E-commerce Platform</h3>
+                        <p class="text-text-secondary text-sm mb-3">
+                            Full-stack e-commerce solution with advanced inventory management, payment processing, and analytics dashboard. Increased client sales by 150% within 6 months.
+                        </p>
+
+                        <!-- Metrics -->
+                        <div class="grid grid-cols-2 gap-4 mb-4 p-3 bg-surface/50 rounded-lg">
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-success">150%</div>
+                                <div class="text-xs text-text-secondary">Sales Increase</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-accent">60%</div>
+                                <div class="text-xs text-text-secondary">Faster Loading</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">React</span>
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">Node.js</span>
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">MongoDB</span>
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">Stripe</span>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <button onclick="openProjectModal('ecommerce')" class="text-accent hover:text-accent-light animation-micro inline-flex items-center space-x-1">
+                            <span>View Details</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <div class="flex space-x-2">
+                            <a href="https://demo.shopflow.example.com" target="_blank" class="p-2 bg-surface hover:bg-hover rounded-lg animation-micro" title="Live Demo">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/cellspacetech/shopflow" target="_blank" class="p-2 bg-surface hover:bg-hover rounded-lg animation-micro" title="GitHub Repository">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.fiverr.com/s/xXLqjkD" class="btn-secondary flex items-center justify-center">
+                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M23.004 15.588a.995.995 0 1 0 .002-1.99.995.995 0 0 0-.002 1.99zm-.996-3.705h-.85c-.546 0-.84.41-.84 1.092v2.466h-1.61v-3.558h-.684c-.547 0-.84.41-.84 1.092v2.466h-1.61v-4.874h1.61v.74c.264-.574.626-.74 1.163-.74h1.972v.74c.264-.574.625-.74 1.162-.74h.527v1.316zm-6.786 1.501h-3.359c.088.546.43.858 1.006.858.43 0 .732-.175.83-.487l1.425.4c-.351.848-1.22 1.364-2.255 1.364-1.748 0-2.549-1.355-2.549-2.515 0-1.14.703-2.505 2.45-2.505 1.856 0 2.471 1.384 2.471 2.408 0 .224-.01.37-.02.477zm-1.562-.945c-.04-.42-.342-.81-.889-.81-.508 0-.81.225-.908.81h1.797zM7.508 15.44h1.416l1.767-4.874h-1.62l-.86 2.837-.878-2.837H5.72l1.787 4.874zm-6.6 0H2.51v-3.558h1.524v3.558h1.591v-4.874H2.51v-.302c0-.332.235-.536.606-.536h.918V8.412H2.85c-1.162 0-1.943.712-1.943 1.755v.4H0v1.316h.908v3.558z"/>
+                                    </svg>
+                                    Fivver
+                                </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Mobile Banking App -->
+                <div class="project-card card group hover:border-accent/50 border border-transparent animation-smooth" data-category="mobile">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mobile Banking Application" class="w-full h-48 object-cover group-hover:scale-105 animation-smooth" onerror="this.src='https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 animation-smooth"></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">SecureBank Mobile App</h3>
+                        <p class="text-text-secondary text-sm mb-3">
+                            Cross-platform mobile banking application with biometric authentication, real-time transactions, and advanced security features. Serves 50,000+ active users.
+                        </p>
+
+                        <!-- Metrics -->
+                        <div class="grid grid-cols-2 gap-4 mb-4 p-3 bg-surface/50 rounded-lg">
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-success">50K+</div>
+                                <div class="text-xs text-text-secondary">Active Users</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-accent">99.9%</div>
+                                <div class="text-xs text-text-secondary">Uptime</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-warning/10 text-warning rounded text-xs">React Native</span>
+                        <span class="px-2 py-1 bg-warning/10 text-warning rounded text-xs">Node.js</span>
+                        <span class="px-2 py-1 bg-warning/10 text-warning rounded text-xs">AWS</span>
+                        <span class="px-2 py-1 bg-warning/10 text-warning rounded text-xs">Security</span>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <button onclick="openProjectModal('banking')" class="text-accent hover:text-accent-light animation-micro inline-flex items-center space-x-1">
+                            <span>View Details</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <div class="flex space-x-2">
+                            <a href="https://apps.apple.com/securebank" target="_blank" class="p-2 bg-surface hover:bg-hover rounded-lg animation-micro" title="App Store">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                                </svg>
+                            </a>
+                            <a href="https://play.google.com/store/apps/securebank" target="_blank" class="p-2 bg-surface hover:bg-hover rounded-lg animation-micro" title="Google Play">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Data Analytics Dashboard -->
+                <div class="project-card card group hover:border-accent/50 border border-transparent animation-smooth" data-category="web">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Data Analytics Dashboard" class="w-full h-48 object-cover group-hover:scale-105 animation-smooth" onerror="this.src='https://images.pixabay.com/photo/2016/11/27/21/42/stock-1863880_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 animation-smooth"></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">DataViz Analytics Platform</h3>
+                        <p class="text-text-secondary text-sm mb-3">
+                            Real-time analytics platform processing 1M+ data points daily. Reduced reporting time from hours to minutes for enterprise client operations.
+                        </p>
+
+                        <!-- Metrics -->
+                        <div class="grid grid-cols-2 gap-4 mb-4 p-3 bg-surface/50 rounded-lg">
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-success">1M+</div>
+                                <div class="text-xs text-text-secondary">Data Points/Day</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-accent">90%</div>
+                                <div class="text-xs text-text-secondary">Time Saved</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-success/10 text-success rounded text-xs">Python</span>
+                        <span class="px-2 py-1 bg-success/10 text-success rounded text-xs">Django</span>
+                        <span class="px-2 py-1 bg-success/10 text-success rounded text-xs">PostgreSQL</span>
+                        <span class="px-2 py-1 bg-success/10 text-success rounded text-xs">D3.js</span>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <button onclick="openProjectModal('analytics')" class="text-accent hover:text-accent-light animation-micro inline-flex items-center space-x-1">
+                            <span>View Details</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <div class="flex space-x-2">
+                            <a href="https://demo.dataviz.example.com" target="_blank" class="p-2 bg-surface hover:bg-hover rounded-lg animation-micro" title="Live Demo">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: API Integration Hub -->
+                <div class="project-card card group hover:border-accent/50 border border-transparent animation-smooth" data-category="api">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="API Integration Dashboard" class="w-full h-48 object-cover group-hover:scale-105 animation-smooth" onerror="this.src='https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 animation-smooth"></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">ConnectFlow API Hub</h3>
+                        <p class="text-text-secondary text-sm mb-3">
+                            Unified API integration platform connecting 15+ third-party services. Reduced integration complexity by 70% for enterprise clients.
+                        </p>
+
+                        <!-- Metrics -->
+                        <div class="grid grid-cols-2 gap-4 mb-4 p-3 bg-surface/50 rounded-lg">
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-success">15+</div>
+                                <div class="text-xs text-text-secondary">API Integrations</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-accent">70%</div>
+                                <div class="text-xs text-text-secondary">Less Complexity</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">Node.js</span>
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">Express</span>
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">Redis</span>
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">Docker</span>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <button onclick="openProjectModal('api')" class="text-accent hover:text-accent-light animation-micro inline-flex items-center space-x-1">
+                            <span>View Details</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <div class="flex space-x-2">
+                            <a href="https://github.com/cellspacetech/connectflow" target="_blank" class="p-2 bg-surface hover:bg-hover rounded-lg animation-micro" title="GitHub Repository">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Database Optimization System -->
+                <div class="project-card card group hover:border-accent/50 border border-transparent animation-smooth" data-category="database">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Database Management System" class="w-full h-48 object-cover group-hover:scale-105 animation-smooth" onerror="this.src='https://images.pixabay.com/photo/2018/05/08/21/29/cyber-security-3384658_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 animation-smooth"></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">OptimizeDB Management Suite</h3>
+                        <p class="text-text-secondary text-sm mb-3">
+                            Advanced database optimization and monitoring system. Improved query performance by 80% and reduced operational costs by 30% for enterprise clients.
+                        </p>
+
+                        <!-- Metrics -->
+                        <div class="grid grid-cols-2 gap-4 mb-4 p-3 bg-surface/50 rounded-lg">
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-success">80%</div>
+                                <div class="text-xs text-text-secondary">Faster Queries</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-accent">30%</div>
+                                <div class="text-xs text-text-secondary">Cost Reduction</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-success/10 text-success rounded text-xs">PostgreSQL</span>
+                        <span class="px-2 py-1 bg-success/10 text-success rounded text-xs">Python</span>
+                        <span class="px-2 py-1 bg-success/10 text-success rounded text-xs">Grafana</span>
+                        <span class="px-2 py-1 bg-success/10 text-success rounded text-xs">AWS RDS</span>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <button onclick="openProjectModal('database')" class="text-accent hover:text-accent-light animation-micro inline-flex items-center space-x-1">
+                            <span>View Details</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <div class="flex space-x-2">
+                            <a href="https://demo.optimizedb.example.com" target="_blank" class="p-2 bg-surface hover:bg-hover rounded-lg animation-micro" title="Live Demo">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Inventory Management App -->
+                <div class="project-card card group hover:border-accent/50 border border-transparent animation-smooth" data-category="mobile">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Inventory Management Mobile App" class="w-full h-48 object-cover group-hover:scale-105 animation-smooth" onerror="this.src='https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 animation-smooth"></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">StockTracker Mobile Suite</h3>
+                        <p class="text-text-secondary text-sm mb-3">
+                            Comprehensive inventory management mobile application with barcode scanning, real-time sync, and automated reorder alerts for retail businesses.
+                        </p>
+
+                        <!-- Metrics -->
+                        <div class="grid grid-cols-2 gap-4 mb-4 p-3 bg-surface/50 rounded-lg">
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-success">95%</div>
+                                <div class="text-xs text-text-secondary">Accuracy Rate</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-accent">40%</div>
+                                <div class="text-xs text-text-secondary">Time Saved</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-warning/10 text-warning rounded text-xs">Flutter</span>
+                        <span class="px-2 py-1 bg-warning/10 text-warning rounded text-xs">Firebase</span>
+                        <span class="px-2 py-1 bg-warning/10 text-warning rounded text-xs">SQLite</span>
+                        <span class="px-2 py-1 bg-warning/10 text-warning rounded text-xs">Barcode</span>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <button onclick="openProjectModal('inventory')" class="text-accent hover:text-accent-light animation-micro inline-flex items-center space-x-1">
+                            <span>View Details</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <div class="flex space-x-2">
+                            <a href="https://apps.apple.com/stocktracker" target="_blank" class="p-2 bg-surface hover:bg-hover rounded-lg animation-micro" title="App Store">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                                </svg>
+                            </a>
+                            <a href="https://play.google.com/store/apps/stocktracker" target="_blank" class="p-2 bg-surface hover:bg-hover rounded-lg animation-micro" title="Google Play">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Real Estate CRM -->
+                <div class="project-card card group hover:border-accent/50 border border-transparent animation-smooth" data-category="web">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Real Estate CRM Dashboard" class="w-full h-48 object-cover group-hover:scale-105 animation-smooth" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 animation-smooth"></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">PropertyFlow CRM System</h3>
+                        <p class="text-text-secondary text-sm mb-3">
+                            Comprehensive real estate CRM with lead management, property listings, and automated follow-up systems. Increased conversion rates by 45% for real estate agencies.
+                        </p>
+
+                        <!-- Metrics -->
+                        <div class="grid grid-cols-2 gap-4 mb-4 p-3 bg-surface/50 rounded-lg">
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-success">45%</div>
+                                <div class="text-xs text-text-secondary">Higher Conversion</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-accent">200+</div>
+                                <div class="text-xs text-text-secondary">Active Agents</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">Vue.js</span>
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">Laravel</span>
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">MySQL</span>
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">Maps API</span>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <button onclick="openProjectModal('crm')" class="text-accent hover:text-accent-light animation-micro inline-flex items-center space-x-1">
+                            <span>View Details</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <div class="flex space-x-2">
+                            <a href="https://demo.propertyflow.example.com" target="_blank" class="p-2 bg-surface hover:bg-hover rounded-lg animation-micro" title="Live Demo">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Payment Gateway Integration -->
+                <div class="project-card card group hover:border-accent/50 border border-transparent animation-smooth" data-category="api">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Payment Gateway System" class="w-full h-48 object-cover group-hover:scale-105 animation-smooth" onerror="this.src='https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 animation-smooth"></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">PaySecure Gateway Hub</h3>
+                        <p class="text-text-secondary text-sm mb-3">
+                            Multi-provider payment gateway integration supporting 10+ payment methods. Reduced transaction failures by 85% and improved checkout conversion by 25%.
+                        </p>
+
+                        <!-- Metrics -->
+                        <div class="grid grid-cols-2 gap-4 mb-4 p-3 bg-surface/50 rounded-lg">
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-success">85%</div>
+                                <div class="text-xs text-text-secondary">Fewer Failures</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-accent">25%</div>
+                                <div class="text-xs text-text-secondary">Better Conversion</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">Node.js</span>
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">Stripe</span>
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">PayPal</span>
+                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">Security</span>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <button onclick="openProjectModal('payment')" class="text-accent hover:text-accent-light animation-micro inline-flex items-center space-x-1">
+                            <span>View Details</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <div class="flex space-x-2">
+                            <a href="https://github.com/cellspacetech/paysecure" target="_blank" class="p-2 bg-surface hover:bg-hover rounded-lg animation-micro" title="GitHub Repository">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+    <section class="section-padding bg-surface/50">
+        <div class="container-max px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+                    Client <span class="text-gradient">Testimonials</span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Real feedback from satisfied clients who've experienced the CellSpace Tech difference.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="card border border-border hover:border-accent/50 animation-smooth">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Michael Chen - CEO" class="w-12 h-12 rounded-full object-cover mr-4" onerror="this.src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold">Affiv</h4>
+                            <p class="text-sm text-text-secondary">Fivver Client</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">
+                        "The freelancer truly IMPRESSED with their code expertise and professional approach, delivering high-quality work backed by excellent documentation. Working with them was seamless thanks to their prompt delivery, cooperative spirit, and clear communication. Highly recommend for outstanding software development! 👍"
+                    </p>
+                    <div class="flex text-accent">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="card border border-border hover:border-accent/50 animation-smooth">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sarah Johnson - CTO" class="w-12 h-12 rounded-full object-cover mr-4" onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-sm text-text-secondary">CTO, DataViz Analytics</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">
+                        "The analytics platform CellSpace Tech built processes over 1 million data points daily with zero downtime. Exceptional technical expertise and reliability."
+                    </p>
+                    <div class="flex text-accent">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="card border border-border hover:border-accent/50 animation-smooth">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="David Rodriguez - Founder" class="w-12 h-12 rounded-full object-cover mr-4" onerror="this.src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold">David Rodriguez</h4>
+                            <p class="text-sm text-text-secondary">Founder, PropertyFlow</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">
+                        "Our real estate CRM has transformed how we manage leads and properties. Conversion rates increased by 45% and our agents love the intuitive interface."
+                    </p>
+                    <div class="flex text-accent">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section-padding">
+        <div class="container-max px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+                    Ready to Start Your <span class="text-gradient">Next Project?</span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
+                    Let's discuss how we can bring your ideas to life with the same excellence and attention to detail shown in these projects.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/254715123008?text=Hi%20CellSpace%20Tech,%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20starting%20a%20new%20project." target="_blank" class="btn-primary inline-flex items-center justify-center space-x-2 group">
+                        <svg class="w-5 h-5 group-hover:scale-110 animation-micro" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                        </svg>
+                        <span>Start Your Project</span>
+                    </a>
+                    <a href="contact_consultation.html" class="btn-secondary inline-flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <span>Get Detailed Consultation</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-border section-padding">
+        <div class="container-max">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-accent to-success rounded-lg flex items-center justify-center">
+                            <span class="text-primary font-bold text-sm">CS</span>
+                        </div>
+                        <span class="text-xl font-semibold">CellSpace Tech</span>
+                    </div>
+                    <p class="text-text-secondary mb-4 max-w-md">
+                        Professional developer with 5+ years of proven excellence. From concept to code, your technical partner for success.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/cellspacetech" target="_blank" class="text-text-secondary hover:text-accent animation-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/cellspacetech" target="_blank" class="text-text-secondary hover:text-accent animation-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/cellspacetech" target="_blank" class="text-text-secondary hover:text-accent animation-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="homepage_developer_portfolio.html" class="text-text-secondary hover:text-accent animation-micro">Home</a></li>
+                        <li><a href="about_professional_background.html" class="text-text-secondary hover:text-accent animation-micro">About</a></li>
+                        <li><a href="services_technology_stack.html" class="text-text-secondary hover:text-accent animation-micro">Services</a></li>
+                        <li><a href="contact_consultation.html" class="text-text-secondary hover:text-accent animation-micro">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><span class="text-text-secondary">Full-Stack Development</span></li>
+                        <li><span class="text-text-secondary">Mobile Applications</span></li>
+                        <li><span class="text-text-secondary">Cloud Solutions</span></li>
+                        <li><span class="text-text-secondary">DevOps & Deployment</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-border pt-8 text-center">
+                <p class="text-text-secondary">
+                    © 2025 CellSpace Tech. All Rights Reserved. | Professional Developer Portfolio
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden bg-background/90 backdrop-blur-md">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-surface rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6 border-b border-border flex justify-between items-center">
+                    <h3 id="modal-title" class="text-2xl font-bold">Project Details</h3>
+                    <button onclick="closeProjectModal()" class="p-2 hover:bg-hover rounded-lg animation-micro">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="modal-content" class="p-6">
+                    <!-- Modal content will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/254715123008?text=Hi%20CellSpace%20Tech,%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20starting%20a%20new%20project." target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-success rounded-full flex items-center justify-center shadow-glow-success hover:scale-110 animation-smooth group">
+        <svg class="w-7 h-7 text-white group-hover:scale-110 animation-micro" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Filter functionality
+        function filterProjects(category) {
+            const projectCards = document.querySelectorAll('.project-card');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+
+            // Update active filter button
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+                btn.classList.remove('bg-accent', 'text-primary');
+                btn.classList.add('bg-surface', 'text-text-secondary', 'hover:bg-hover');
+            });
+
+            const activeBtn = document.querySelector(`[data-filter="${category}"]`);
+            activeBtn.classList.add('active');
+            activeBtn.classList.remove('bg-surface', 'text-text-secondary', 'hover:bg-hover');
+            activeBtn.classList.add('bg-accent', 'text-primary');
+
+            // Filter projects
+            projectCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(-20px)';
+
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Project modal data
+        const projectData = {
+            ecommerce: {
+                title: 'ShopFlow E-commerce Platform',
+                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                problem: 'Client needed a comprehensive e-commerce solution to replace their outdated system that was causing cart abandonment and poor user experience.',
+                solution: 'Built a modern, responsive e-commerce platform with advanced features including real-time inventory management, multiple payment gateways, and comprehensive analytics dashboard.',
+                technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'AWS', 'Redis'],
+                duration: '3 months',
+                results: [
+                    '150% increase in sales within 6 months',
+                    '60% improvement in page loading speed',
+                    '40% reduction in cart abandonment',
+                    '99.9% uptime achieved'
+                ],
+                features: [
+                    'Real-time inventory management',
+                    'Multi-payment gateway integration',
+                    'Advanced analytics dashboard',
+                    'Mobile-responsive design',
+                    'SEO optimization',
+                    'Admin panel with role management'
+                ]
+            },
+            banking: {
+                title: 'SecureBank Mobile App',
+                image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                problem: 'Financial institution required a secure, user-friendly mobile banking application with advanced security features and real-time transaction capabilities.',
+                solution: 'Developed a cross-platform mobile banking app with biometric authentication, end-to-end encryption, and real-time transaction processing.',
+                technologies: ['React Native', 'Node.js', 'PostgreSQL', 'AWS', 'Biometric APIs', 'Encryption'],
+                duration: '6 months',
+                results: [
+                    '50,000+ active users within first year',
+                    '99.9% uptime maintained',
+                    '95% user satisfaction rating',
+                    'Zero security breaches'
+                ],
+                features: [
+                    'Biometric authentication',
+                    'Real-time transactions',
+                    'Account management',
+                    'Bill payment integration',
+                    'Transaction history',
+                    'Push notifications'
+                ]
+            },
+            analytics: {
+                title: 'DataViz Analytics Platform',
+                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                problem: 'Enterprise client struggled with manual data processing and reporting that took hours to complete, hindering decision-making processes.',
+                solution: 'Created a real-time analytics platform that processes millions of data points daily with interactive visualizations and automated reporting.',
+                technologies: ['Python', 'Django', 'PostgreSQL', 'D3.js', 'Redis', 'Celery'],
+                duration: '4 months',
+                results: [
+                    '1M+ data points processed daily',
+                    '90% reduction in reporting time',
+                    '70% improvement in decision-making speed',
+                    'Real-time data visualization'
+                ],
+                features: [
+                    'Real-time data processing',
+                    'Interactive dashboards',
+                    'Automated report generation',
+                    'Custom visualization tools',
+                    'Data export capabilities',
+                    'User role management'
+                ]
+            },
+            api: {
+                title: 'ConnectFlow API Hub',
+                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                problem: 'Enterprise client needed to integrate multiple third-party services but faced complexity in managing different API formats and authentication methods.',
+                solution: 'Built a unified API integration platform that standardizes communication with 15+ third-party services through a single interface.',
+                technologies: ['Node.js', 'Express', 'Redis', 'Docker', 'JWT', 'Microservices'],
+                duration: '5 months',
+                results: [
+                    '15+ API integrations unified',
+                    '70% reduction in integration complexity',
+                    '50% faster development cycles',
+                    '99.8% API uptime achieved'
+                ],
+                features: [
+                    'Unified API interface',
+                    'Authentication management',
+                    'Rate limiting and caching',
+                    'Real-time monitoring',
+                    'Error handling and logging',
+                    'Documentation portal'
+                ]
+            },
+            database: {
+                title: 'OptimizeDB Management Suite',
+                image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                problem: 'Enterprise client experienced slow database queries and high operational costs due to inefficient database management and lack of monitoring.',
+                solution: 'Developed a comprehensive database optimization and monitoring system with automated performance tuning and cost optimization features.',
+                technologies: ['PostgreSQL', 'Python', 'Grafana', 'AWS RDS', 'Monitoring Tools', 'Automation Scripts'],
+                duration: '4 months',
+                results: [
+                    '80% improvement in query performance',
+                    '30% reduction in operational costs',
+                    '95% reduction in downtime',
+                    'Automated optimization processes'
+                ],
+                features: [
+                    'Performance monitoring',
+                    'Automated query optimization',
+                    'Cost analysis and reporting',
+                    'Backup and recovery systems',
+                    'Security compliance',
+                    'Real-time alerts'
+                ]
+            },
+            inventory: {
+                title: 'StockTracker Mobile Suite',
+                image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                problem: 'Retail business struggled with manual inventory tracking leading to stockouts, overstocking, and inaccurate inventory records.',
+                solution: 'Created a comprehensive mobile inventory management app with barcode scanning, real-time sync, and automated reorder alerts.',
+                technologies: ['Flutter', 'Firebase', 'SQLite', 'Barcode Scanner', 'Cloud Functions', 'Push Notifications'],
+                duration: '3 months',
+                results: [
+                    '95% inventory accuracy achieved',
+                    '40% time saved in inventory management',
+                    '60% reduction in stockouts',
+                    'Real-time inventory visibility'
+                ],
+                features: [
+                    'Barcode scanning',
+                    'Real-time inventory sync',
+                    'Automated reorder alerts',
+                    'Multi-location support',
+                    'Reporting and analytics',
+                    'Offline functionality'
+                ]
+            },
+            crm: {
+                title: 'PropertyFlow CRM System',
+                image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                problem: 'Real estate agency needed a comprehensive CRM to manage leads, properties, and agent performance while improving conversion rates.',
+                solution: 'Built a feature-rich real estate CRM with lead management, property listings, automated follow-ups, and performance analytics.',
+                technologies: ['Vue.js', 'Laravel', 'MySQL', 'Maps API', 'Email Integration', 'SMS Gateway'],
+                duration: '5 months',
+                results: [
+                    '45% increase in conversion rates',
+                    '200+ active agents using the system',
+                    '60% improvement in lead response time',
+                    'Streamlined property management'
+                ],
+                features: [
+                    'Lead management system',
+                    'Property listing management',
+                    'Automated follow-up sequences',
+                    'Agent performance tracking',
+                    'Map integration',
+                    'Document management'
+                ]
+            },
+            payment: {
+                title: 'PaySecure Gateway Hub',
+                image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                problem: 'E-commerce platform experienced high transaction failure rates and poor checkout conversion due to limited payment options.',
+                solution: 'Integrated multiple payment gateways into a unified system supporting 10+ payment methods with intelligent routing and fallback mechanisms.',
+                technologies: ['Node.js', 'Stripe', 'PayPal', 'Security Protocols', 'Webhook Management', 'Fraud Detection'],
+                duration: '4 months',
+                results: [
+                    '85% reduction in transaction failures',
+                    '25% improvement in checkout conversion',
+                    '10+ payment methods supported',
+                    'Enhanced security compliance'
+                ],
+                features: [
+                    'Multi-gateway integration',
+                    'Intelligent payment routing',
+                    'Fraud detection system',
+                    'Webhook management',
+                    'Transaction monitoring',
+                    'PCI compliance'
+                ]
+            }
+        };
+
+        // Modal functions
+        function openProjectModal(projectId) {
+            const modal = document.getElementById('project-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+            const project = projectData[projectId];
+
+            if (!project) return;
+
+            modalTitle.textContent = project.title;
+            modalContent.innerHTML = `
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div>
+                        <img src="${project.image}" alt="${project.title}" class="w-full h-64 object-cover rounded-lg mb-6">
+
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-3 text-accent">Problem Statement</h4>
+                            <p class="text-text-secondary">${project.problem}</p>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-3 text-accent">Solution Approach</h4>
+                            <p class="text-text-secondary">${project.solution}</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-3 text-success">Key Results</h4>
+                            <ul class="space-y-2">
+                                ${project.results.map(result => `
+                                    <li class="flex items-center space-x-2">
+                                        <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-text-secondary">${result}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-3 text-warning">Key Features</h4>
+                            <ul class="space-y-2">
+                                ${project.features.map(feature => `
+                                    <li class="flex items-center space-x-2">
+                                        <svg class="w-5 h-5 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                        <span class="text-text-secondary">${feature}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="card">
+                                <h5 class="font-semibold mb-2">Duration</h5>
+                                <p class="text-accent font-bold">${project.duration}</p>
+                            </div>
+                            <div class="card">
+                                <h5 class="font-semibold mb-2">Technologies</h5>
+                                <div class="flex flex-wrap gap-1">
+                                    ${project.technologies.slice(0, 3).map(tech => `
+                                        <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs">${tech}</span>
+                                    `).join('')}
+                                    ${project.technologies.length > 3 ? `<span class="px-2 py-1 bg-surface text-text-secondary rounded text-xs">+${project.technologies.length - 3}</span>` : ''}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex space-x-4">
+                            <a href="contact_consultation.html" class="btn-primary flex-1 text-center">
+                                Discuss Similar Project
+                            </a>
+                            <a href="https://wa.me/254715123008?text=Hi%20CellSpace%20Tech,%20I'm%20interested%20in%20the%20${project.title}%20project."
+                               target="_blank"
+                               class="btn-secondary flex-1 text-center">
+                                WhatsApp Inquiry
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('project-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on outside click
+        document.getElementById('project-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'project-modal') {
+                closeProjectModal();
+            }
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-background/95');
+                nav.classList.remove('bg-background/90');
+            } else {
+                nav.classList.add('bg-background/90');
+                nav.classList.remove('bg-background/95');
+            }
+        });
+
+        // Initialize filter styles
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                if (btn.classList.contains('active')) {
+                    btn.classList.add('bg-accent', 'text-primary');
+                } else {
+                    btn.classList.add('bg-surface', 'text-text-secondary', 'hover:bg-hover');
+                }
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            document.querySelectorAll('.project-card, .card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
