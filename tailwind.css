@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #1a1a1a; /* Professional foundation */
+  --color-secondary: #2d2d2d; /* Content separation */
+  --color-accent: #00d4ff; /* Technical precision */
+  
+  /* Background Colors */
+  --color-background: #0f0f0f; /* Deep canvas */
+  --color-surface: #252525; /* Card elevation */
+  
+  /* Text Colors */
+  --color-text-primary: #ffffff; /* Crystal clarity */
+  --color-text-secondary: #b3b3b3; /* Supporting information */
+  
+  /* Status Colors */
+  --color-success: #00ff88; /* Achievement celebration */
+  --color-warning: #ffb800; /* Attention without alarm */
+  --color-error: #ff4757; /* Clear problem indication */
+  
+  /* Interactive States */
+  --color-border: #333333; /* Form inputs and interactive elements */
+  --color-hover: #333333; /* Hover state background */
+  
+  /* Shadow */
+  --shadow-elevation: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-subtle: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-text-primary font-inter antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter font-semibold tracking-tight;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+  
+  code {
+    @apply font-mono text-accent bg-surface px-2 py-1 rounded text-sm;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-primary font-semibold px-6 py-3 rounded-lg transition-all duration-300 ease-out hover:bg-accent/90 hover:shadow-elevation;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface text-text-primary font-semibold px-6 py-3 rounded-lg border border-border transition-all duration-300 ease-out hover:bg-hover hover:border-accent/50;
+  }
+  
+  .card {
+    @apply bg-surface rounded-xl p-6 shadow-subtle transition-all duration-300 ease-out hover:shadow-elevation;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-success bg-clip-text text-transparent;
+  }
+  
+  .border-gradient {
+    @apply border border-transparent bg-gradient-to-r from-accent/20 to-success/20 bg-clip-border;
+  }
+}
+
+@layer utilities {
+  .animation-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .animation-micro {
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
